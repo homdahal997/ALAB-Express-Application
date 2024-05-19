@@ -13,6 +13,21 @@ app.get("/", (req, res) =>{
     res.render("index")
 });
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
+
+app.post("/submit-form", (req, res) => {
+    console.log(req.body);
+    res.send("successfully submitted");
+});
+app.get("/resourcedownload", (req, res) => {
+    res.render("resourcedownload")
+});
+
+app.get("/:name", (req, res) => {
+    res.render(req.params.name);
+});
+
 // Start the application on port 3000
 app.listen(3000, () => {
     // Log a message to the console when the application starts

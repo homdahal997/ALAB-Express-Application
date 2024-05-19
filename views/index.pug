@@ -5,4 +5,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Express app
     body 
-        h1 Express application
+        h1 Express form
+        form(method='post', action='/submit-form')
+            input(type='text', name='name', placeholder='Your Name')
+            input(type='submit', value='Submit')

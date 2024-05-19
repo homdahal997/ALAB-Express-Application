@@ -10,7 +10,7 @@ app.set('view engine', 'pug');
 /// Define a route handler for GET requests made to the root path ('/')
 app.get("/", (req, res) =>{
     // Send the following view as response to the client
-    res.send("Welcome to my own first Express application")
+    res.render("index")
 });
 
 // Start the application on port 3000

@@ -4,6 +4,9 @@ const express = require("express");
 //Create an instance of an express application
 const app = express();
 
+// Set 'pug' as the view engine for the application
+app.set('view engine', 'pug');
+
 /// Define a route handler for GET requests made to the root path ('/')
 app.get("/", (req, res) =>{
     // Send the following view as response to the client
